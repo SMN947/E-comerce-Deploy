@@ -20,7 +20,7 @@ app.use('/product', router);
 api(router);
 
 
-app.use(express.static('dist'));
+app.use(express.static('dist/index.html'));
 app.listen(port, () => {
   console.log(`E-Commerce app listening on port ${port}`)
 })
