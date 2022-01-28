@@ -13,14 +13,14 @@ app.use((req, res, next) => {
 });
 
 
-app.use(express.static(path.join(__dirname, '/dist')));  
+
 const router = express.Router()
 const api = require('./api')
 app.use('/product', router);
 api(router);
 
-app.get('*', (req, res) => {res.sendFile(path.join(__dirname, 'dist/index.html'))})
 
+app.use(express.static('dist'));
 app.listen(port, () => {
   console.log(`E-Commerce app listening on port ${port}`)
 })
