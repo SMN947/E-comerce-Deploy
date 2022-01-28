@@ -12,7 +12,7 @@ app.use((req, res, next) => {
   next();
 });
 
-
+app.use(express.static(path.join(__dirname, '/dist')));  
 
 const router = express.Router()
 const api = require('./api')
